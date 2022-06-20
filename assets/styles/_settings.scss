@@ -1,0 +1,69 @@
+
+// Fonts
+
+@font-face {
+    font-family: 'Allura';
+    src: url(../fonts/Allura-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+// Variables
+
+$font1: Allura, cursive;
+$font2: Poppins, serif;
+$font3: Roboto, serif;
+
+$white1: #EEEEEE;
+$grey1: #B6B6B6;
+$color2: #A67245;
+$color3: #21201E;
+$color5: #000000;
+
+
+// Mixins
+
+@mixin title {
+    font-family: $font2;
+    text-transform: uppercase;
+}
+
+
+
+// Resets CSS
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $color3;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+a, a:visited {
+    color: $white1;
+    cursor: pointer;
+}
+
+p, li {
+    font-family: $font3;
+}
+

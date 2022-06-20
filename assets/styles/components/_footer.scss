@@ -1,0 +1,100 @@
+footer {
+    background: url(../img/bg-footer.jpg) center/cover;
+    text-align: left;
+    padding: 65px 32px;
+
+    @media screen and (max-width: 650px){
+        grid-template-columns: 1fr;
+        background: black;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+
+        .left-part {
+            padding-right: 30px;
+
+            @media screen and (max-width: 650px){
+                display: none;
+            }
+
+            h2 {
+                color:$color2;
+                font-family: $font1;
+                font-weight: 100;
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+            
+            p {
+                font-size: 14px;
+                color: $grey1;
+                line-height: 40px;
+            }
+        }
+
+        .right-part {
+            padding-left: 50px;
+
+            @media screen and (max-width: 650px){
+                padding-left: 0;
+            }
+
+            h3 {
+                @include title;
+                color: $white1;
+                font-weight: 100;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            .newsletter {
+
+                input {
+                    background: $color3;
+                    border: 1px solid rgba(166, 114, 69, 0.151);
+                    padding: 5px 15px;
+                    color: $white1;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .social-network {
+                display: flex;
+                margin-top: 80px;
+
+                @media screen and (max-width: 650px){
+                    h3 {
+                        display: none;
+                    }
+                }
+
+                ul {
+                    margin-left: 20px;
+                    display: flex;
+                    color: $grey1;
+
+                    @media screen and (max-width: 650px){
+                        margin-left: 0px;
+                    }
+
+                    li {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 15px;
+
+
+                    }
+                }
+            }
+        }
+    }
+}

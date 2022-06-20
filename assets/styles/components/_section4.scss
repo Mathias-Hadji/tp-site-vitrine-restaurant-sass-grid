@@ -1,0 +1,187 @@
+.section4 {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1050px){
+        display: none;
+    }
+
+    h2 {
+        font-family: $font1;
+        color: $color2;
+        font-weight: 100;
+        font-size: 40px;
+    }
+
+    h4 {
+        @include title;
+        color: $white1;
+        font-size: 32px;
+    }
+
+    img {
+        margin: 30px 0;
+    }
+
+    .events-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "a b"
+        "c b";
+        gap: 20px;
+
+        .event-left {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            background: #fff;
+            text-align: left;
+
+            .date {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+
+                .date-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: $color3;
+                    color: $white1;
+                    padding: 20px;
+
+                    p {
+                        font-size: 27px;
+                    }
+
+                    span {
+                        margin-top: -5px;
+                        font-family: $font3;
+                    }
+                }
+            }
+
+            .date--01 {
+                background: url('../img/event-01.jpg') center/cover;
+            }
+
+            .date--02 {
+                background: url('../img/event-02.jpg') center/cover;
+            }
+
+            .date--03 {
+                background: url('../img/event-03.jpg') center/cover;
+            }
+
+            .info-event {
+                padding: 30px;
+                font-family: $font3;
+
+                h3 {
+                    font-weight: 100;
+                }
+
+                p {
+                    color:$grey1;
+                    font-size: 14px;
+                    margin: 15px 0;
+                }
+
+                h5 {
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .event1 {
+            grid-area: a;
+        }
+
+        .event2 {
+            grid-area: c;
+        }
+
+        .event3 {
+            grid-area: b;
+        }
+
+        .event--big {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            background: url(../img/event-03.jpg) center/cover;
+
+            .card-event {
+                background: #fff;
+                width: 90%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                .date {
+                    position: absolute;
+                    top: 0;
+                    text-align: center;
+
+                    .date-content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background: $color3;
+                        color: $white1;
+                        padding: 20px;
+    
+                        p {
+                            font-size: 27px;
+                        }
+    
+                        span {
+                            margin-top: -5px;
+                            font-family: $font3;
+                        }
+                    }
+                }
+                .info-event {
+                    padding: 30px;
+                    font-family: $font3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+    
+                    h3 {
+                        font-weight: 100;
+                        text-align: center;
+                    }
+    
+                    p {
+                        color:$grey1;
+                        font-size: 14px;
+                        margin: 15px 0;
+                    }
+    
+                    h5 {
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        margin-bottom: 20px;
+                        position: absolute;
+                        bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
